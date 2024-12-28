@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zjun.myblog</groupId>
-    <artifactId>blog</artifactId>
+    <artifactId>myblog-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>myblog-blog</name>
-    <description>myblog-blog</description>
+    <name>myblog-web</name>
+    <description>myblog-web</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -69,7 +69,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.zjun.myblog.blog.MyblogBlogApplication</mainClass>
+                    <mainClass>com.zjun.myblog.web.MyblogWebApplication</mainClass>
                     <skip>true</skip>
                 </configuration>
                 <executions>
