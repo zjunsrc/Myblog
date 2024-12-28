@@ -7,7 +7,6 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!-- 将 Spring Boot 的版本号切换成 2.6.3 版本 -->
         <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -24,12 +23,15 @@
     <!-- 子模块管理 -->
     <modules>
         <!-- 应用入口 -->
-        <module>myblog-web</module>
+        <module>myblog-home</module>
+        <!-- 后台管理 -->
+        <module>myblog-admin</module>
     </modules>
 
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>1.8</java.version>
+        <springboot.version>2.6.3</springboot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -37,7 +39,8 @@
 
     <!-- 统一依赖管理 -->
     <dependencyManagement>
-
+        <dependencies>
+        </dependencies>
     </dependencyManagement>
 
     <build>
