@@ -6,16 +6,21 @@
     <parent>
         <groupId>com.zjun</groupId>
         <artifactId>myblog-springboot</artifactId>
-        <version>${revision}</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.zjun.myblog</groupId>
     <artifactId>myblog-home</artifactId>
-    <version>${revision}</version>
     <name>myblog-home</name>
     <description>application entry</description>
 
     <dependencies>
+        <dependency>
+            <groupId>com.zjun</groupId>
+            <artifactId>myblog-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
         <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
