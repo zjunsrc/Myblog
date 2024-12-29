@@ -16,6 +16,13 @@
     <description>admin module of blog</description>
 
     <dependencies>
+
+        <!-- common 模块 -->
+        <dependency>
+            <groupId>com.zjun</groupId>
+            <artifactId>myblog-common</artifactId>
+        </dependency>
+
         <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
