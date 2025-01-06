@@ -1,4 +1,4 @@
-package com.zjun.myblog.web;
+package com.zjun.myblog.home;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
