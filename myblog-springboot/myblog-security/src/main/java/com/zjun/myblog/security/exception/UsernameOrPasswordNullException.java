@@ -1,4 +1,4 @@
-package com.myblog.security.exception;
+package com.zjun.myblog.security.exception;
 
 import org.springframework.security.core.AuthenticationException;
 

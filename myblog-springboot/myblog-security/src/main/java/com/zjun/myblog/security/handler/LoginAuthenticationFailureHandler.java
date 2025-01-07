@@ -1,4 +1,4 @@
-package com.myblog.security.handler;
+package com.zjun.myblog.security.handler;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;

@@ -1,4 +1,4 @@
-package com.myblog.security.model;
+package com.zjun.myblog.security.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

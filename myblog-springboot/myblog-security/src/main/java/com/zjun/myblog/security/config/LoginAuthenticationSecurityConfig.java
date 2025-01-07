@@ -1,8 +1,8 @@
-package com.myblog.security.config;
+package com.zjun.myblog.security.config;
 
-import com.myblog.security.filter.LoginAuthenticationFilter;
-import com.myblog.security.handler.LoginAuthenticationFailureHandler;
-import com.myblog.security.handler.LoginAuthenticationSuccessHandler;
+import com.zjun.myblog.security.filter.LoginAuthenticationFilter;
+import com.zjun.myblog.security.handler.LoginAuthenticationFailureHandler;
+import com.zjun.myblog.security.handler.LoginAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -34,14 +34,6 @@ public class LoginAuthenticationSecurityConfig extends SecurityConfigurerAdapter
         // 设置登录认证对应的处理类（成功处理、失败处理）
         filter.setAuthenticationSuccessHandler(loginAuthenticationSuccessHandler);
         filter.setAuthenticationFailureHandler(loginAuthenticationFailureHandler);
-
-        // // 直接使用 DaoAuthenticationProvider, 它是 Spring Security 提供的默认的身份验证提供者之一
-        // DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-        // // 设置 userDetailService，用于获取用户的详细信息
-        // provider.setUserDetailsService(userDetailsService);
-        // // 设置加密算法
-        // provider.setPasswordEncoder(passwordEncoder);
-        // httpSecurity.authenticationProvider(provider);
 
         // 将这个过滤器添加到 UsernamePasswordAuthenticationFilter 之前执行
         System.out.println("httpSecurity = " + httpSecurity.getSharedObject(AuthenticationManager.class));

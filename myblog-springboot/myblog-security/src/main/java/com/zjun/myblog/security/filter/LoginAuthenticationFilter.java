@@ -1,8 +1,8 @@
-package com.myblog.security.filter;
+package com.zjun.myblog.security.filter;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myblog.security.exception.UsernameOrPasswordNullException;
+import com.zjun.myblog.security.exception.UsernameOrPasswordNullException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -47,7 +47,6 @@ public class LoginAuthenticationFilter extends AbstractAuthenticationProcessingF
         String password = passwordNode.textValue();
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
                 = new UsernamePasswordAuthenticationToken(username, password);
-        System.out.println(getAuthenticationManager());
         return getAuthenticationManager().authenticate(usernamePasswordAuthenticationToken);
     }
 }

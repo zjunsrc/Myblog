@@ -1,4 +1,4 @@
-package com.myblog.security.utils;
+package com.zjun.myblog.security.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zjun.myblog.common.response.Response;

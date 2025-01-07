@@ -1,6 +1,9 @@
-package com.myblog.security.handler;
+package com.zjun.myblog.security.handler;
 
-import com.myblog.security.utils.JwtUtils;
+import com.zjun.myblog.common.response.Response;
+import com.zjun.myblog.security.model.LoginRspVO;
+import com.zjun.myblog.security.utils.HttpResponseUtils;
+import com.zjun.myblog.security.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,15 +30,13 @@ public class LoginAuthenticationSuccessHandler implements AuthenticationSuccessH
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         // 从 authentication 对象中获取用户的 UserDetails 实例，这里是获取用户的用户名
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        //
-        // // 通过用户名生成 Token
-        // String username = userDetails.getUsername();
-        // String token = jwtUtils.generateToken(username);
-        //
-        // // 返回 Token
-        // LoginRspVO loginRspVO = LoginRspVO.builder().token(token).build();
-        //
-        // HttpResponseUtils.ok(response, Response.success(loginRspVO));
 
+        // 通过用户名生成 Token
+        String username = userDetails.getUsername();
+        String token = jwtUtils.generateToken(username);
+
+        // 返回 Token
+        LoginRspVO loginRspVO = LoginRspVO.builder().token(token).build();
+        HttpResponseUtils.ok(response, Response.success(loginRspVO));
     }
 }
